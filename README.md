@@ -11,7 +11,12 @@ https://docs.docker.com/get-docker/
 
 When docker is sucessfully installed you should be able to run the ```docker --version``` command to verify that the docker daemon is running.
 
-> docker --version
+```
+docker --version
+```
+
+![](images/docker-v.gif)
+
 
 Alternatively, use an in-browser Docker playground called play-with-docker.com. The play-with-docker.com site provides access to a full VM running Docker directly in a web browser, making it easy to work with Docker from any device.
 
@@ -29,15 +34,19 @@ To run a publicly-available Docker Container, follow these steps:
 
 Search for a container named "hello-world." Use the command docker search hello-world to find the "hello-world"" image:
 
+```
 docker search hello-world
+```
 
-[](images/hello-world.gif)
+![](images/hello-world.gif)
 
 Docker searches the public DockerHub repositories and finds the "hello-world" image. You can see theres a few however theres only one with the name hello-world, so lets run it with the command:
 
+```
 docker run hello-world
+```
 
-[](images/run-hello-world.gif)
+![](images/run-hello-world.gif)
 
 
 Docker first checks to see whether the "hello-world" image is available locally. If not, Docker automatically downloads it from DockerHub. Docker sets up the container to run locally, including ensuring its isolation from other processes. Once the preparations are made, Docker runs the image.
