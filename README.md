@@ -1,6 +1,8 @@
 # Docker 101 - Getting started with containers
 
-Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop. This gives developers the ability to create predictable environments that are isolated from the rest of the applications and can be run anywhere. This guide will focus on the most popular container technology, Docker, and show you how you can quickly spin up environments for you to host your applications and then provide a way to quickly package your applications and deploy anywhere.
+Containers offer way of packaging our applications which means they can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop. 
+
+This gives developers the ability to create predictable environments that are isolated from the rest of the applications and can be run anywhere. This guide will focus on the most popular container technology, Docker, and show you how you can quickly spin up environments for you to host your applications and then provide a way to quickly package your applications and deploy anywhere.
 
 ## Prerequsites
 
@@ -17,7 +19,7 @@ docker --version
 ![](https://github.com/sttrayno/Docker-101/blob/master/images/docker-v.gif?raw=true)
 
 
-Alternatively, you can use an in-browser Docker playground called www.play-with-docker.com. The play-with-docker.com site provides access to a full VM running Docker directly in a web browser, making it easy to work with Docker from any device.
+Alternatively, you can use an in-browser Docker playground called www.play-with-docker.com. The play-with-docker gives provides access to a full VM running Docker directly in a web browser, making it easy to work with Docker from any device.
 
 To use this open www.play-with-docker.com on a browser the site displays a Captcha dialog to ensure that you're not a robot. Press Play and complete the Captcha to continue. The play-with-docker site displays a session countdown and an Add New Instance button. 
 
@@ -25,7 +27,7 @@ Click the Add New Instance button. The site creates and displays a terminal sess
 
 ## Step 1 - Hello world
 
-The simplest way to use Docker is to run an existing public image that's available from [Docker Hub](hub.docker.com)
+The simplest way to use Docker is to run an existing public image that's available from the [Docker Hub](hub.docker.com)
 
 Docker Hub is a public exchange for sharing Docker containers. Other container sharing sites are available, but we'll take advantage of the fact that Docker's command-line interface searches DockerHub by default. Dockerhub is by far the most common and the largest
 
@@ -50,11 +52,11 @@ docker run hello-world
 
 Docker first checks to see whether the "hello-world" image is available locally. If not, Docker automatically downloads it from DockerHub. Docker sets up the container to run locally, including ensuring its isolation from other processes. Once the preparations are made, Docker runs the image.
 
-Congratulations! You just ran your first Docker container!
+Congratulations! You just ran your first Docker container! Give yourself a pat on the back
 
 ## Step 2 -  A look at the dockerfile
 
-Now we've ran our first container sucessfully and we know our docker environment is working well it's time to start to go a little more into the key concepts. One of the first concepts you need to understand to do anything with containers is the concept of the dockerfile.
+Now we've ran our first container sucessfully and we know our docker environment is working well it's time to go a little more into the key concepts. One of the first concepts you need to understand to do anything with containers is the concept of the dockerfile as this is key to building containers.
 
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
 
@@ -67,11 +69,14 @@ RUN apt-get -y install python
 ````
 
 Lets build this text file. First create a new directory and then create a file named dockerfile and copy the above into it.
+
 ```
 mkdir example1
 cd example1
 ```
+
 Feel free to do this on the GUI rather than CLI as shown. 
+
 ```
 vi dockerfile
 ```
