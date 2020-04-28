@@ -17,3 +17,5 @@ Alternatively, use an in-browser Docker playground called play-with-docker.com. 
 
 To use this open play-with-docker.com on a browser the site displays a Captcha dialog to ensure that you're not a robot. Press Play and complete the Captcha to continue to play-with-docker.com. The play-with-docker site displays a session countdown and an Add New Instance button.
 Click the Add New Instance button. The play-with-docker.com site creates and displays a terminal session in the browser. The rest of this learning lab uses the in-browser terminal session to work with Docker.
+
+
