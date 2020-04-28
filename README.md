@@ -70,4 +70,17 @@ A Dockerfile must begin with a `FROM` instruction. The FROM instruction specifie
 
 The RUN commands then specify commands you wish to run locally on your container, in our case we're going to update our package manager and install python. This can be as simple as you want or complex as you want.
 
+That's all there is to it, make sure you're in the same directory on your command line as your docker file is and run the command:
 
+```
+docker build .
+```
+
+After the Docker build completes you can run the new Container. You can use the docker exec command to enter into a shell on your container. 
+
+```
+docker run <> 
+docker exec -it <> /bin/bash
+```
+
+Pretty nice, maybe we now have somewhere to run our next Linux module...
