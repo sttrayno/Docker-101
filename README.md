@@ -78,13 +78,18 @@ That's all there is to it, make sure you're in the same directory on your comman
 docker build .
 ```
 
-After the Docker build completes you can run the new Container. You can use the docker exec command to enter into a shell on your container. 
+![](https://github.com/sttrayno/Docker-101/blob/master/images/docker-build.gif?raw=true)
+
+
+After the Docker build completes you can run the new Container. You can use the docker exec command to enter into a shell on your container. When it finishes building it should give you an image id which is a alphanumeric string after the output says the container has been sucessfully built. Take a note of that as you'll need it to run the next command:
 
 ```
-docker run <> 
-docker exec -it <> /bin/bash
+docker run -it <image-id> /bin/bash
 ```
 
-Pretty nice, maybe we now have somewhere to run our next Linux module...
+![](https://github.com/sttrayno/Docker-101/blob/master/images/docker-run.gif?raw=true)
+
+
+Pretty nice, you should now be in a Linux shell and now have somewhere to run our next Linux module...
 
 Also congratulations, you just built your first docker container from scratch.
