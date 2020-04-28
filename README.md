@@ -31,9 +31,14 @@ Search for a container named "hello-world." Use the command docker search hello-
 
 docker search hello-world
 
+[](images/hello-world.gif)
+
 Docker searches the public DockerHub repositories and finds the "hello-world" image. You can see theres a few however theres only one with the name hello-world, so lets run it with the command:
 
 docker run hello-world
+
+[](images/run-hello-world.gif)
+
 
 Docker first checks to see whether the "hello-world" image is available locally. If not, Docker automatically downloads it from DockerHub. Docker sets up the container to run locally, including ensuring its isolation from other processes. Once the preparations are made, Docker runs the image.
 
