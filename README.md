@@ -18,11 +18,11 @@ docker --version
 ![](https://github.com/sttrayno/Docker-101/blob/master/images/docker-v.gif?raw=true)
 
 
-Alternatively, use an in-browser Docker playground called play-with-docker.com. The play-with-docker.com site provides access to a full VM running Docker directly in a web browser, making it easy to work with Docker from any device.
+Alternatively, you can use an in-browser Docker playground called www.play-with-docker.com. The play-with-docker.com site provides access to a full VM running Docker directly in a web browser, making it easy to work with Docker from any device.
 
-To use this open play-with-docker.com on a browser the site displays a Captcha dialog to ensure that you're not a robot. Press Play and complete the Captcha to continue to play-with-docker.com. The play-with-docker site displays a session countdown and an Add New Instance button
-.
-Click the Add New Instance button. The play-with-docker.com site creates and displays a terminal session in the browser. The rest of this learning lab uses the in-browser terminal session to work with Docker.
+To use this open www.play-with-docker.com on a browser the site displays a Captcha dialog to ensure that you're not a robot. Press Play and complete the Captcha to continue. The play-with-docker site displays a session countdown and an Add New Instance button. 
+
+Click the Add New Instance button. The site creates and displays a terminal session in the browser. The rest of this learning lab uses the in-browser terminal session to work with Docker.
 
 ## Step 1 - Hello world
 
@@ -55,6 +55,16 @@ Congratulations! You just ran your first Docker container!
 
 ## Step 2 -  A look at the dockerfile
 
-## Step 3 - Building our own docker file and deploying
+Now we've ran our first container sucessfully and we know our docker environment is working well it's time to start to go a little more into the key concepts. One of the first concepts you need to understand to do anything with containers is the concept of the dockerfile.
+
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
+
+An example dockerfile might look like below. For a full list of commands and details around what you can do in a dockerfile follow [this link](https://docs.docker.com/engine/reference/builder/)
+
+```
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install python
+````
 
 
