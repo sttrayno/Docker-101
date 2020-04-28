@@ -66,13 +66,23 @@ RUN apt-get update
 RUN apt-get -y install python
 ````
 
-Lets disect that Dockerfile a bit
+Lets build this text file. First create a new directory and then create a file named dockerfile and copy the above into it.
+```
+mkdir example1
+cd example1
+```
+Feel free to do this on the GUI rather than CLI as shown. 
+```
+vi dockerfile
+```
+
+Lets disect that Dockerfile we've just created a bit a bit
 
 A Dockerfile must begin with a `FROM` instruction. The FROM instruction specifies the Parent Image from which you are building. If you don't want to specify an image you can use the argument scratch however we're going to base the image we build here off of Ubuntu to make life a bit easier for us
 
 The RUN commands then specify commands you wish to run locally on your container, in our case we're going to update our package manager and install python. This can be as simple as you want or complex as you want, lets keep it simple for now
 
-That's all there is to it, make sure you're in the same directory on your command line as your docker file is and run the command:
+That's all there is to it. Now we need to build our container into an image so that Docker can run it. To do that, make sure you're in the same directory on your command line as your docker file is and run the command:
 
 ```
 docker build .
@@ -81,14 +91,13 @@ docker build .
 ![](https://github.com/sttrayno/Docker-101/blob/master/images/docker-build.gif?raw=true)
 
 
-After the Docker build completes you can run the new Container. You can use the docker exec command to enter into a shell on your container. When it finishes building it should give you an image id which is a alphanumeric string after the output says the container has been sucessfully built. Take a note of that as you'll need it to run the next command:
+After the Docker build completes you're now ready run the new container.  When it finishes building it should give you an image id which is a alphanumeric string after the output says the container has been sucessfully built. Take a note of that as you'll need it to run the next command:
 
 ```
 docker run -it <image-id> /bin/bash
 ```
 
 ![](https://github.com/sttrayno/Docker-101/blob/master/images/docker-run.gif?raw=true)
-
 
 Pretty nice, you should now be in a Linux shell and now have somewhere to run our next Linux module...
 
