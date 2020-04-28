@@ -1,7 +1,6 @@
 # Docker 101 - Getting started with containers
 
-Introduction guide to getting started with Docker containers
-
+Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop. This gives developers the ability to create predictable environments that are isolated from the rest of the applications and can be run anywhere. This guide will focus on the most popular container technology, Docker, and show you how you can quickly spin up environments for you to host your applications and then provide a way to quickly package your applications and deploy anywhere.
 
 ## Prerequsites
 
