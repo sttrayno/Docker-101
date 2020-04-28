@@ -63,8 +63,12 @@ An example dockerfile might look like below. For a full list of commands and det
 
 ```
 FROM ubuntu
-RUN apt-get update
+RUN apt-get update 
 RUN apt-get -y install python
 ````
+
+A Dockerfile must begin with a `FROM` instruction. The FROM instruction specifies the Parent Image from which you are building. If you don't want to specify an image you can use the argument SCRATCH however we're going to base the image we build here off of ubuntu. 
+
+The RUN commands then specify commands you wish to run locally on your container, in our case we're going to update our package manager and install python. This can be as simple as you want or complex as you want.
 
 
